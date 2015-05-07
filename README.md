@@ -1,4 +1,5 @@
 # ro-whooing-ios
+- Read only 'whooing.com' iOS client.
 
 ## Phase 1
 - login

@@ -2,7 +2,7 @@
 # platform :ios, '8.0'
 
 target 'ro-whooing' do
-pod 'OverCoat', '~> 2.1.1'
+pod 'Overcoat', '~> 2.1.1'
 pod 'AFNetworkActivityLogger', '~> 2.0.4'
 
 end
