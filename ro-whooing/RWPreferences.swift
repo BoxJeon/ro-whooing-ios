@@ -10,18 +10,48 @@ import Foundation
 
 class RWPreferences {
     
-    private static let KEY_ACCESS_TOKEN: String  = "KEY_ACCESS_TOKEN"
+    private static let KEY_TOKEN: String = "KEY_TOKEN"
+    private static let KEY_TOKEN_SECRET: String  = "KEY_TOKEN_SECRET"
+    private static let KEY_PIN: String = "KEY_PIN"
+    private static let KEY_API_KEY: String = "KEY_API_KEY"
     
-    class var appId: String { return "171" }
+    class var appId: Int { return 171 }
     
     class var appSecret: String { return "340ef0c475d2271b67bfca969297e6be9cbb8acc" }
     
-    class var accessToken: String? {
+    class var token: String? {
         get {
-            return NSUserDefaults.standardUserDefaults().objectForKey(KEY_ACCESS_TOKEN) as? String
+            return NSUserDefaults.standardUserDefaults().objectForKey(KEY_TOKEN) as? String
         }
         set {
-            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: KEY_ACCESS_TOKEN)
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: KEY_TOKEN)
+        }
+    }
+    
+    class var tokenSecret: String? {
+        get {
+            return NSUserDefaults.standardUserDefaults().objectForKey(KEY_TOKEN_SECRET) as? String
+        }
+        set {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: KEY_TOKEN_SECRET)
+        }
+    }
+    
+    class var pin: String? {
+        get {
+            return NSUserDefaults.standardUserDefaults().objectForKey(KEY_PIN) as? String
+        }
+        set {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: KEY_PIN)
+        }
+    }
+    
+    class var apiKey: String? {
+        get {
+            return NSUserDefaults.standardUserDefaults().objectForKey(KEY_API_KEY) as? String
+        }
+        set {
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: KEY_API_KEY)
         }
     }
     

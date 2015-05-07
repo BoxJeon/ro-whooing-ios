@@ -1,9 +1,24 @@
 # ro-whooing-ios
 
-목표 스펙
-- 로그인
-- 대차대조표 확인
+## Phase 1
+- login
+- show balance sheet
 
-ios: 8.0 이상
-xcode: 1.2 이상
+## Support
+* ios 8.0+
+* xcode 6.3+
+
+## Settings
+```
+[sudo] gem install cocoapods
+pod setup
+```
+
+```
+git clone https://github.com/BoxJeon/ro-whooing-ios.git
+cd ro-whooing-ios
+pod install
+```
+
+* open ro-whooing.xcworkspace
 

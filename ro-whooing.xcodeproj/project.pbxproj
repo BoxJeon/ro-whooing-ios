@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D487DF21AFB359800683DF7 /* RWAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D487DF11AFB359800683DF7 /* RWAuthorizationManager.swift */; };
+		8D487DF41AFB388400683DF7 /* RWResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D487DF31AFB388400683DF7 /* RWResponse.swift */; };
+		8D487DF61AFB393E00683DF7 /* RWResponseAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D487DF51AFB393E00683DF7 /* RWResponseAuthorization.swift */; };
+		8D487DF81AFB399700683DF7 /* RWMBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D487DF71AFB399700683DF7 /* RWMBase.swift */; };
 		8D60656C1AFB01EE00A1C85E /* RWRestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60656B1AFB01EE00A1C85E /* RWRestApiManager.swift */; };
 		8D6065701AFB1F5B00A1C85E /* RWPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D60656F1AFB1F5B00A1C85E /* RWPreferences.swift */; };
 		8D76949F1AFAFE1E00429E4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D76949E1AFAFE1E00429E4E /* AppDelegate.swift */; };
@@ -32,6 +36,10 @@
 /* Begin PBXFileReference section */
 		16CFDC5FACF4945FB75A7CA6 /* Pods-ro-whooing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ro-whooing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ro-whooing/Pods-ro-whooing.debug.xcconfig"; sourceTree = "<group>"; };
 		1D324565A0D8CD65601787C4 /* Pods-ro-whooing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ro-whooing.release.xcconfig"; path = "Pods/Target Support Files/Pods-ro-whooing/Pods-ro-whooing.release.xcconfig"; sourceTree = "<group>"; };
+		8D487DF11AFB359800683DF7 /* RWAuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWAuthorizationManager.swift; sourceTree = "<group>"; };
+		8D487DF31AFB388400683DF7 /* RWResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWResponse.swift; sourceTree = "<group>"; };
+		8D487DF51AFB393E00683DF7 /* RWResponseAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWResponseAuthorization.swift; sourceTree = "<group>"; };
+		8D487DF71AFB399700683DF7 /* RWMBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWMBase.swift; sourceTree = "<group>"; };
 		8D60656B1AFB01EE00A1C85E /* RWRestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWRestApiManager.swift; sourceTree = "<group>"; };
 		8D60656E1AFB028500A1C85E /* RWBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWBridgingHeader.h; sourceTree = "<group>"; };
 		8D60656F1AFB1F5B00A1C85E /* RWPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWPreferences.swift; sourceTree = "<group>"; };
@@ -68,18 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D6065691AFB01C500A1C85E /* preferences */ = {
+		8D6065691AFB01C500A1C85E /* authorization */ = {
 			isa = PBXGroup;
 			children = (
 				8D60656F1AFB1F5B00A1C85E /* RWPreferences.swift */,
+				8D487DF11AFB359800683DF7 /* RWAuthorizationManager.swift */,
 			);
-			name = preferences;
+			name = authorization;
 			sourceTree = "<group>";
 		};
 		8D60656A1AFB01D800A1C85E /* network */ = {
 			isa = PBXGroup;
 			children = (
+				8D487DF71AFB399700683DF7 /* RWMBase.swift */,
 				8D60656B1AFB01EE00A1C85E /* RWRestApiManager.swift */,
+				8D487DF31AFB388400683DF7 /* RWResponse.swift */,
+				8D487DF51AFB393E00683DF7 /* RWResponseAuthorization.swift */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -108,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8D60656A1AFB01D800A1C85E /* network */,
-				8D6065691AFB01C500A1C85E /* preferences */,
+				8D6065691AFB01C500A1C85E /* authorization */,
 				8D76949E1AFAFE1E00429E4E /* AppDelegate.swift */,
 				8D7694A41AFAFE1E00429E4E /* Main.storyboard */,
 				8D7694A01AFAFE1E00429E4E /* RWAccountViewController.swift */,
@@ -298,10 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D487DF41AFB388400683DF7 /* RWResponse.swift in Sources */,
+				8D487DF61AFB393E00683DF7 /* RWResponseAuthorization.swift in Sources */,
 				8D7694A31AFAFE1E00429E4E /* RWBalanceSheetViewController.swift in Sources */,
 				8D60656C1AFB01EE00A1C85E /* RWRestApiManager.swift in Sources */,
+				8D487DF81AFB399700683DF7 /* RWMBase.swift in Sources */,
 				8D76949F1AFAFE1E00429E4E /* AppDelegate.swift in Sources */,
 				8D7694A11AFAFE1E00429E4E /* RWAccountViewController.swift in Sources */,
+				8D487DF21AFB359800683DF7 /* RWAuthorizationManager.swift in Sources */,
 				8D6065701AFB1F5B00A1C85E /* RWPreferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
