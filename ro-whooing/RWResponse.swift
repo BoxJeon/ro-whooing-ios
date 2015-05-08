@@ -19,7 +19,9 @@ private enum Status: Int {
 class RWResponse: OVCResponse {
     
     var code: Int?
+    var message: String?
     var error: String?
+    var rest_of_api: Int?
     
     func getError() -> NSError? {
         if self.code == nil || self.code == Status.OK.rawValue {

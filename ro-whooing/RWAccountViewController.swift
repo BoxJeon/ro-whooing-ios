@@ -49,10 +49,16 @@ class RWAccountViewController: UIViewController, UIWebViewDelegate {
     func setupAsNotLoggedIn() {
         self.webView.hidden = false
         if let token = RWPreferences.token {
-            let (path, _) = RWApi.Authorize.getPathAndModel()
-            self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "\(path)?token=\(token)")!))
+            let path = RWApi.Authorize.getPath()
+            self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "\(RWApi.baseUrl)\(path)?token=\(token)")!))
         } else {
             // TODO: token을 가져오지 못한 경우.
+            RWRestApiManager.getToken({ (error, token) -> Void in
+                if error == nil {
+                    RWPreferences.token = token
+                    self.setupAsNotLoggedIn()
+                }
+            })
         }
     }
 

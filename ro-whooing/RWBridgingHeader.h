@@ -9,6 +9,8 @@
 #ifndef ro_whooing_RWBridgingHeader_h
 #define ro_whooing_RWBridgingHeader_h
 
+#import <CommonCrypto/CommonHMAC.h>
+
 #import <Overcoat/Overcoat.h>
 #import <AFNetworkActivityLogger/AFNetworkActivityLogger.h>
 

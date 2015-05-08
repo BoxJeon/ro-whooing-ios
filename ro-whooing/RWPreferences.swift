@@ -13,7 +13,7 @@ class RWPreferences {
     private static let KEY_TOKEN: String = "KEY_TOKEN"
     private static let KEY_TOKEN_SECRET: String  = "KEY_TOKEN_SECRET"
     private static let KEY_PIN: String = "KEY_PIN"
-    private static let KEY_API_KEY: String = "KEY_API_KEY"
+    private static let KEY_SIGNATURE: String = "KEY_SIGNATURE"
     
     class var appId: Int { return 171 }
     
@@ -46,12 +46,12 @@ class RWPreferences {
         }
     }
     
-    class var apiKey: String? {
+    class var signature: String? {
         get {
-            return NSUserDefaults.standardUserDefaults().objectForKey(KEY_API_KEY) as? String
+            return NSUserDefaults.standardUserDefaults().objectForKey(KEY_SIGNATURE) as? String
         }
         set {
-            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: KEY_API_KEY)
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: KEY_SIGNATURE)
         }
     }
     

@@ -23,7 +23,6 @@ class RWAuthorizationManager {
             if error == nil {
                 RWPreferences.token = token
                 RWPreferences.tokenSecret = tokenSecret
-                RWPreferences.generateApiKey()
                 NSNotificationCenter.defaultCenter().postNotificationName(RWAuthorizationManager.NOTIFICATION_LOGIN_SUCCESS, object: nil)
             } else {
                 // TODO: 에러처리

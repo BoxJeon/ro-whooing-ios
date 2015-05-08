@@ -6,8 +6,8 @@
 - show balance sheet
 
 ## Support
-* ios 8.0+
-* xcode 6.3+
+- ios 8.0+
+- xcode 6.3+
 
 ## Settings
 ```
@@ -21,5 +21,5 @@ cd ro-whooing-ios
 pod install
 ```
 
-* open ro-whooing.xcworkspace
+- open ro-whooing.xcworkspace
 

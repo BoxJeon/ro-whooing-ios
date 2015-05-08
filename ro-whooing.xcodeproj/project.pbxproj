@@ -20,6 +20,11 @@
 		8D7694A81AFAFE1E00429E4E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D7694A71AFAFE1E00429E4E /* Images.xcassets */; };
 		8D7694AB1AFAFE1E00429E4E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7694A91AFAFE1E00429E4E /* LaunchScreen.xib */; };
 		8D7694B71AFAFE1E00429E4E /* ro_whooingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7694B61AFAFE1E00429E4E /* ro_whooingTests.swift */; };
+		8DF59A5E1AFC4128006B5782 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF59A5D1AFC4128006B5782 /* Security.framework */; };
+		8DF59A611AFC4381006B5782 /* RWExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59A601AFC4381006B5782 /* RWExtension.swift */; };
+		8DF59A631AFC9164006B5782 /* RWResponseBalanceSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59A621AFC9164006B5782 /* RWResponseBalanceSheet.swift */; };
+		8DF59A651AFC9872006B5782 /* RWResponseSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59A641AFC9872006B5782 /* RWResponseSections.swift */; };
+		8DF59A671AFC98AC006B5782 /* RWMSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF59A661AFC98AC006B5782 /* RWMSection.swift */; };
 		9C62259BF6079277DD249C0B /* libPods-ro-whooing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC2F7CDD1CBC2AEBFD16B35 /* libPods-ro-whooing.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +59,11 @@
 		8D7694B01AFAFE1E00429E4E /* ro-whooingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ro-whooingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7694B51AFAFE1E00429E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D7694B61AFAFE1E00429E4E /* ro_whooingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ro_whooingTests.swift; sourceTree = "<group>"; };
+		8DF59A5D1AFC4128006B5782 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8DF59A601AFC4381006B5782 /* RWExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWExtension.swift; sourceTree = "<group>"; };
+		8DF59A621AFC9164006B5782 /* RWResponseBalanceSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWResponseBalanceSheet.swift; sourceTree = "<group>"; };
+		8DF59A641AFC9872006B5782 /* RWResponseSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWResponseSections.swift; sourceTree = "<group>"; };
+		8DF59A661AFC98AC006B5782 /* RWMSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RWMSection.swift; sourceTree = "<group>"; };
 		9CC2F7CDD1CBC2AEBFD16B35 /* libPods-ro-whooing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ro-whooing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF59A5E1AFC4128006B5782 /* Security.framework in Frameworks */,
 				9C62259BF6079277DD249C0B /* libPods-ro-whooing.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,9 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				8D487DF71AFB399700683DF7 /* RWMBase.swift */,
+				8DF59A661AFC98AC006B5782 /* RWMSection.swift */,
 				8D60656B1AFB01EE00A1C85E /* RWRestApiManager.swift */,
 				8D487DF31AFB388400683DF7 /* RWResponse.swift */,
 				8D487DF51AFB393E00683DF7 /* RWResponseAuthorization.swift */,
+				8DF59A641AFC9872006B5782 /* RWResponseSections.swift */,
+				8DF59A621AFC9164006B5782 /* RWResponseBalanceSheet.swift */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -119,6 +133,7 @@
 		8D76949B1AFAFE1E00429E4E /* ro-whooing */ = {
 			isa = PBXGroup;
 			children = (
+				8DF59A5F1AFC436D006B5782 /* common */,
 				8D60656A1AFB01D800A1C85E /* network */,
 				8D6065691AFB01C500A1C85E /* authorization */,
 				8D76949E1AFAFE1E00429E4E /* AppDelegate.swift */,
@@ -158,9 +173,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8DF59A5F1AFC436D006B5782 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				8DF59A601AFC4381006B5782 /* RWExtension.swift */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
 		E59AE9EB1F830D5A06967932 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DF59A5D1AFC4128006B5782 /* Security.framework */,
 				9CC2F7CDD1CBC2AEBFD16B35 /* libPods-ro-whooing.a */,
 			);
 			name = Frameworks;
@@ -312,13 +336,17 @@
 			files = (
 				8D487DF41AFB388400683DF7 /* RWResponse.swift in Sources */,
 				8D487DF61AFB393E00683DF7 /* RWResponseAuthorization.swift in Sources */,
+				8DF59A631AFC9164006B5782 /* RWResponseBalanceSheet.swift in Sources */,
+				8DF59A611AFC4381006B5782 /* RWExtension.swift in Sources */,
 				8D7694A31AFAFE1E00429E4E /* RWBalanceSheetViewController.swift in Sources */,
 				8D60656C1AFB01EE00A1C85E /* RWRestApiManager.swift in Sources */,
 				8D487DF81AFB399700683DF7 /* RWMBase.swift in Sources */,
+				8DF59A651AFC9872006B5782 /* RWResponseSections.swift in Sources */,
 				8D76949F1AFAFE1E00429E4E /* AppDelegate.swift in Sources */,
 				8D7694A11AFAFE1E00429E4E /* RWAccountViewController.swift in Sources */,
 				8D487DF21AFB359800683DF7 /* RWAuthorizationManager.swift in Sources */,
 				8D6065701AFB1F5B00A1C85E /* RWPreferences.swift in Sources */,
+				8DF59A671AFC98AC006B5782 /* RWMSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
