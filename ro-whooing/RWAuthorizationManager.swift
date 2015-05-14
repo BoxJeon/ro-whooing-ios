@@ -35,6 +35,7 @@ class RWAuthorizationManager {
         RWPreferences.token = nil
         RWPreferences.pin = nil
         RWPreferences.tokenSecret = nil
+        RWPreferences.signature = nil
         NSNotificationCenter.defaultCenter().postNotificationName(NOTIFICATION_LOGOUT_SUCCESS, object: nil)
     }
 }

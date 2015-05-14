@@ -22,6 +22,7 @@ class RWBalanceSheetViewController: UIViewController, UITableViewDataSource, UIT
         RWRestApiManager.getSections { (error, sections) -> Void in
             if error == nil {
                 self.sections = sections
+                self.tableView.reloadData()
             } else {
                 // TODO: 에러처리
             }
@@ -41,7 +42,7 @@ class RWBalanceSheetViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RWDataCell") as! UITableViewCell
-        cell.textLabel?.text = "으아아"
+        cell.textLabel?.text = self.sections?[indexPath.row].title
         return cell
     }
 

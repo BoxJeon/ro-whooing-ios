@@ -117,7 +117,7 @@ class RWRestApiManager: OVCHTTPSessionManager {
         }
         let nounce = "dc5584feec085bbda9a26e003f702c9b77692625"
         let timeStamp = String(Int(NSDate().timeIntervalSince1970))
-        let apiKey = "app_id=\(RWPreferences.appId),token=\(token),signature=\(signature),nounce=\(nounce),timestamp=\(timeStamp)"
+        let apiKey = "app_id=\(RWPreferences.appId),token=\(token),signiture=\(signature),nounce=\(nounce),timestamp=\(timeStamp)" // signiture는 오타가 아니다. api 문서에도 그렇게 되어 있다. 왜!!!
         sharedManager.requestSerializer.setValue(apiKey, forHTTPHeaderField: "X-API-KEY")
     }
     
@@ -144,7 +144,7 @@ class RWRestApiManager: OVCHTTPSessionManager {
     }
     
     class func getSections(completion: (error: NSError?, sections: Array<RWMSection>?) -> Void) {
-//        self.setApiKey()
+        self.setApiKey()
         let api = RWApi.Sections
         var path = api.getPath()
         var parameters = api.getParameters()
